@@ -6,7 +6,7 @@
 #include <cstdio>
 #include <vector>
 #include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 
@@ -26,10 +26,8 @@ int main() {
 		cin >> arr[arr_i];
 	}
 
-	for (int i = 0; i < n; ++i) {
-		tempInt += arr[i];
-	}
-	cout << "Sum: ";
+    tempInt = accumulate(arr.begin(),arr.end(),0);
+		cout << "Sum: ";
 	cout << tempInt;
 	cout << "\n";
 
